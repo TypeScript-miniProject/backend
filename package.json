@@ -6,12 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && nodemon dist/app.js",
-    "dev": "nodemon --exec ./node_modules/.bin/ts-node src/app.ts",
-    "sequelize": "ts-node node_modules/sequelize-cli/lib/sequelize",
     "db:create": "npx ts-node ./src/migrations/create-schema.ts",
-    "db:migrate": "npx ts-node ./src/migrations/create-table.ts",
-    "db:migrate:undo": "npm run sequelize db:migrate:undo --config ./src/config/config.ts --migrations-path ./src/migrations --models-path ./src/models",
-    "db:migrate:undo:all": "npm run sequelize db:migrate:undo:all --config ./src/config/config.ts --migrations-path ./src/migrations --models-path ./src/models"
+    "db:migrate": "npx ts-node ./src/migrations/create-table.ts"
   },
   "keywords": [],
   "author": "",
